@@ -1,0 +1,5 @@
+# Keep local and CI checks consistent when Ruff defaults change.
+target-version = "py312"
+
+[lint]
+select = ["E4", "E7", "E9", "F"]
