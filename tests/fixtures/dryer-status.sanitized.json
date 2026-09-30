@@ -1,0 +1,83 @@
+{
+  "_archive": {
+    "deviceModel": "H100T7R-BS",
+    "capturedAt": "2026-09-30T00:07:16+08:00",
+    "kind": "captured_cloud_status",
+    "redactedFields": [
+      "wifiSSID",
+      "wifiMacAddr",
+      "wifiIP"
+    ],
+    "note": "历史云端快照，不代表阅读文档时的实时状态；缺失字段不自动补零。"
+  },
+  "response": {
+    "code": 200,
+    "message": "成功",
+    "data": {
+      "status": {
+        "washingTime": 75,
+        "collectionRun": 0,
+        "dryModeCapabilities": [
+          27,
+          0,
+          1,
+          6,
+          12,
+          16,
+          5,
+          7,
+          18,
+          17,
+          19,
+          26,
+          10,
+          20,
+          15,
+          2,
+          21,
+          14,
+          4,
+          22,
+          8,
+          23,
+          24,
+          25
+        ],
+        "creaseResistance": 0,
+        "lowTempDryStatus": 0,
+        "tslReqVersion": "",
+        "wifiSSID": "<WIFI_SSID>",
+        "washShellOrderTime": 0,
+        "washShellWashingTime": 75,
+        "errorCode": [],
+        "wifiMode": 0,
+        "wifiDropPacketRate": 0,
+        "lowerShellWashingStatus": 1,
+        "uvSterilize": 0,
+        "dryWindSpeed": 3,
+        "intelliDetectPercentage": 100,
+        "waterBoxStatus": 0,
+        "tslQueryTime": 1790695161504,
+        "washShellOrderMode": 0,
+        "speedUpStatus": 1,
+        "lowerShellWashingTimeSet": 1,
+        "dryMuteStatus": 0,
+        "powerSwitch": 1,
+        "wifiMacAddr": "<WIFI_MAC>",
+        "lowTempDry": 0,
+        "washShellRunStatus": 2,
+        "washShellWashingTemp": 0,
+        "wifiSignalStrength": 100,
+        "creaseResistanceStatus": 0,
+        "wifiIP": "<LAN_IP>",
+        "childLock": 0,
+        "washShellDryMode": 1,
+        "tslLatestVersion": "V3.0.84",
+        "wifiRSSI": -29,
+        "washMuteMode": 0,
+        "speedUpMode": 1,
+        "washShellMode": 27
+      }
+    }
+  }
+}

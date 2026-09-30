@@ -1,0 +1,17 @@
+{
+  "_archive": {
+    "capturedAt": "2026-09-30T00:12:23+08:00",
+    "kind": "captured_control_response",
+    "redactedFields": [
+      "response.path deviceId"
+    ]
+  },
+  "response": {
+    "success": true,
+    "code": "200",
+    "message": null,
+    "timestamp": 1790698343614,
+    "data": null,
+    "path": "/v1/control/property/<WASHER_DEVICE_ID>"
+  }
+}

@@ -1,0 +1,481 @@
+{
+  "_archive": {
+    "capturedAt": "2026-09-30T00:06:25+08:00",
+    "kind": "minimal_device_list",
+    "note": "保留集成需要的字段和 identifiers；设备 ID、网络身份使用占位符。全部返回字段结构另见 device-list-field-shapes.json。"
+  },
+  "response": {
+    "success": true,
+    "code": "200",
+    "message": null,
+    "timestamp": 1790697985097,
+    "data": [
+      {
+        "deviceName": "滚筒洗衣机",
+        "nickName": "滚筒洗衣机",
+        "deviceType": "G100T7R-DIS",
+        "category": "DW",
+        "productKey": "11160101096",
+        "isOnline": "1",
+        "cloudType": 1,
+        "protocol": "1",
+        "firmwareVersion": "V8-B602T20-WFMV205.425.1.29",
+        "netType": 1,
+        "isControl": 1,
+        "deviceId": "<WASHER_DEVICE_ID>",
+        "identifiers": [
+          {
+            "identifier": "lowerShellRotateSpeed",
+            "value": 3
+          },
+          {
+            "identifier": "lowerShellRinseCount",
+            "value": 2
+          },
+          {
+            "identifier": "nspWaterLevelFreq",
+            "value": 41683
+          },
+          {
+            "identifier": "detergentIntellectGear",
+            "value": 1
+          },
+          {
+            "identifier": "lowerShellStainsType",
+            "value": 0
+          },
+          {
+            "identifier": "lowerShellWashingTempSetInt",
+            "value": 40
+          },
+          {
+            "identifier": "errorCode",
+            "value": []
+          },
+          {
+            "identifier": "nspRotateSpeed",
+            "value": 0
+          },
+          {
+            "identifier": "dirtyRemindWashCurTimes",
+            "value": 0
+          },
+          {
+            "identifier": "tslLatestVersion",
+            "value": "V3.0.152"
+          },
+          {
+            "identifier": "wifiSignalStrength",
+            "value": 100
+          },
+          {
+            "identifier": "tslReqVersion",
+            "value": ""
+          },
+          {
+            "identifier": "nightWashMode",
+            "value": 0
+          },
+          {
+            "identifier": "nspOriginalWeight",
+            "value": 90
+          },
+          {
+            "identifier": "tslQueryTime",
+            "value": 1790694850877
+          },
+          {
+            "identifier": "nspFittingWeight",
+            "value": 0.1
+          },
+          {
+            "identifier": "cleaningReminder",
+            "value": 0
+          },
+          {
+            "identifier": "wifiRSSI",
+            "value": -28
+          },
+          {
+            "identifier": "lowerShellWashingTimeSet",
+            "value": 1
+          },
+          {
+            "identifier": "wifiMacAddr",
+            "value": "<WIFI_MAC>"
+          },
+          {
+            "identifier": "speedUpMode",
+            "value": 0
+          },
+          {
+            "identifier": "collectionRun",
+            "value": 0
+          },
+          {
+            "identifier": "programMemory",
+            "value": 0
+          },
+          {
+            "identifier": "nspFittingEccentricityValue",
+            "value": 1
+          },
+          {
+            "identifier": "freshnessMode",
+            "value": 0
+          },
+          {
+            "identifier": "lowerShellMode",
+            "value": 35
+          },
+          {
+            "identifier": "ECO",
+            "value": 0
+          },
+          {
+            "identifier": "fabricSoftenerIntellect",
+            "value": 1
+          },
+          {
+            "identifier": "cleaningCount",
+            "value": 0
+          },
+          {
+            "identifier": "turnOffSpecNotification",
+            "value": []
+          },
+          {
+            "identifier": "lowerShellWashingTemp",
+            "value": 40
+          },
+          {
+            "identifier": "wifiIP",
+            "value": "<LAN_IP>"
+          },
+          {
+            "identifier": "nspOriginalEccentricityValue",
+            "value": 6
+          },
+          {
+            "identifier": "wifiMode",
+            "value": 0
+          },
+          {
+            "identifier": "lowerShellMainRunningTime",
+            "value": 49
+          },
+          {
+            "identifier": "lowerShellRunStatus",
+            "value": 0
+          },
+          {
+            "identifier": "aiSmartControlSource",
+            "value": "APP"
+          },
+          {
+            "identifier": "lowerShellWashingCount",
+            "value": 0
+          },
+          {
+            "identifier": "detergentIntellect",
+            "value": 1
+          },
+          {
+            "identifier": "capabilities",
+            "value": [
+              1,
+              2
+            ]
+          },
+          {
+            "identifier": "freshnessTime",
+            "value": 10
+          },
+          {
+            "identifier": "intelliDetectPercentage",
+            "value": 0
+          },
+          {
+            "identifier": "consumablesRemain",
+            "value": []
+          },
+          {
+            "identifier": "lowerShellWashingTime",
+            "value": 71
+          },
+          {
+            "identifier": "powerSwitch",
+            "value": 0
+          },
+          {
+            "identifier": "freshWaterRinseMode",
+            "value": 1
+          },
+          {
+            "identifier": "lowerShellWashingStatus",
+            "value": 0
+          },
+          {
+            "identifier": "soak",
+            "value": 0
+          },
+          {
+            "identifier": "childLock",
+            "value": 0
+          },
+          {
+            "identifier": "lowerShellWashingTempSet",
+            "value": 4
+          },
+          {
+            "identifier": "dirtyRemindWashMaxTimes",
+            "value": 20
+          },
+          {
+            "identifier": "lowerShellProgramRunningRime",
+            "value": 71
+          },
+          {
+            "identifier": "wifiDropPacketRate",
+            "value": 0
+          },
+          {
+            "identifier": "nspMotorPower",
+            "value": 0
+          },
+          {
+            "identifier": "washerDryerLinkage",
+            "value": 0
+          },
+          {
+            "identifier": "lowerShellOrderTime",
+            "value": 0
+          },
+          {
+            "identifier": "lowerShellModeCapabilities",
+            "value": [
+              35,
+              0,
+              1,
+              15,
+              3,
+              26,
+              14,
+              2,
+              4,
+              29,
+              23,
+              10,
+              9,
+              11,
+              5,
+              18,
+              16,
+              17,
+              6,
+              21,
+              33
+            ]
+          },
+          {
+            "identifier": "lowerShellOrderMode",
+            "value": 0
+          },
+          {
+            "identifier": "wifiSSID",
+            "value": "<WIFI_SSID>"
+          }
+        ]
+      },
+      {
+        "deviceName": "干衣机",
+        "nickName": "干衣机",
+        "deviceType": "H100T7R-BW/H100T7R-BS",
+        "category": "DRY",
+        "productKey": "11160501018",
+        "isOnline": "1",
+        "cloudType": 1,
+        "protocol": "1",
+        "firmwareVersion": "V8-B602T20-WFMV205.425.1.29",
+        "netType": 1,
+        "isControl": 1,
+        "deviceId": "<DRYER_DEVICE_ID>",
+        "identifiers": [
+          {
+            "identifier": "washShellRunStatus",
+            "value": 2
+          },
+          {
+            "identifier": "intelliDetectPercentage",
+            "value": 100
+          },
+          {
+            "identifier": "wifiIP",
+            "value": "<LAN_IP>"
+          },
+          {
+            "identifier": "washShellOrderTime",
+            "value": 0
+          },
+          {
+            "identifier": "creaseResistance",
+            "value": 0
+          },
+          {
+            "identifier": "lowerShellWashingStatus",
+            "value": 1
+          },
+          {
+            "identifier": "washShellDryMode",
+            "value": 1
+          },
+          {
+            "identifier": "washShellWashingTime",
+            "value": 76
+          },
+          {
+            "identifier": "wifiSSID",
+            "value": "<WIFI_SSID>"
+          },
+          {
+            "identifier": "speedUpMode",
+            "value": 1
+          },
+          {
+            "identifier": "lowTempDryStatus",
+            "value": 0
+          },
+          {
+            "identifier": "tslReqVersion",
+            "value": ""
+          },
+          {
+            "identifier": "powerSwitch",
+            "value": 1
+          },
+          {
+            "identifier": "wifiSignalStrength",
+            "value": 100
+          },
+          {
+            "identifier": "wifiMode",
+            "value": 0
+          },
+          {
+            "identifier": "washShellWashingTemp",
+            "value": 0
+          },
+          {
+            "identifier": "washMuteMode",
+            "value": 0
+          },
+          {
+            "identifier": "washingTime",
+            "value": 76
+          },
+          {
+            "identifier": "creaseResistanceStatus",
+            "value": 0
+          },
+          {
+            "identifier": "wifiDropPacketRate",
+            "value": 0
+          },
+          {
+            "identifier": "waterBoxStatus",
+            "value": 0
+          },
+          {
+            "identifier": "wifiRSSI",
+            "value": -29
+          },
+          {
+            "identifier": "tslQueryTime",
+            "value": 1790695161504
+          },
+          {
+            "identifier": "lowTempDry",
+            "value": 0
+          },
+          {
+            "identifier": "washShellMode",
+            "value": 27
+          },
+          {
+            "identifier": "dryModeCapabilities",
+            "value": [
+              27,
+              0,
+              1,
+              6,
+              12,
+              16,
+              5,
+              7,
+              18,
+              17,
+              19,
+              26,
+              10,
+              20,
+              15,
+              2,
+              21,
+              14,
+              4,
+              22,
+              8,
+              23,
+              24,
+              25
+            ]
+          },
+          {
+            "identifier": "errorCode",
+            "value": []
+          },
+          {
+            "identifier": "dryWindSpeed",
+            "value": 3
+          },
+          {
+            "identifier": "washShellOrderMode",
+            "value": 0
+          },
+          {
+            "identifier": "collectionRun",
+            "value": 0
+          },
+          {
+            "identifier": "speedUpStatus",
+            "value": 1
+          },
+          {
+            "identifier": "wifiMacAddr",
+            "value": "<WIFI_MAC>"
+          },
+          {
+            "identifier": "childLock",
+            "value": 0
+          },
+          {
+            "identifier": "dryMuteStatus",
+            "value": 0
+          },
+          {
+            "identifier": "lowerShellWashingTimeSet",
+            "value": 1
+          },
+          {
+            "identifier": "uvSterilize",
+            "value": 0
+          },
+          {
+            "identifier": "tslLatestVersion",
+            "value": "V3.0.84"
+          }
+        ]
+      }
+    ]
+  }
+}

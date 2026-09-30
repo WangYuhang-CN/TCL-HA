@@ -1,0 +1,605 @@
+{
+  "title": "TCL+",
+  "config": {
+    "step": {
+      "user": {
+        "description": "连接 TCL+ 云端以生成登录二维码。"
+      },
+      "scan": {
+        "title": "使用 TCL+ 扫码",
+        "description": "请用手机 TCL+ 扫描二维码并确认授权，然后点击提交。如图片未显示，可[打开二维码链接]({qr_url})。\n\n![TCL+ 登录二维码]({qr_url})",
+        "data": {
+          "new_code": "重新生成二维码"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "无法连接 TCL+，请重试。",
+      "qr_pending": "授权尚未完成，请在 TCL+ 中确认后再次提交。",
+      "qr_expired": "二维码已过期，请选择重新生成二维码。",
+      "no_devices": "该账号下没有可识别的国内 TCL+ 设备。",
+      "wrong_account": "该账号不包含原集成中的设备。"
+    },
+    "abort": {
+      "reauth_successful": "TCL+ 授权已更新。"
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "power": {
+        "name": "电源"
+      },
+      "child_lock": {
+        "name": "童锁"
+      },
+      "cleaning_reminder": {
+        "name": "筒清洁提醒"
+      },
+      "water_box_full": {
+        "name": "储水盒已满"
+      }
+    },
+    "sensor": {
+      "overview": {
+        "name": "当前状态"
+      },
+      "important_alerts": {
+        "name": "重要提醒"
+      },
+      "run_state": {
+        "name": "运行状态"
+      },
+      "stage": {
+        "name": "工作阶段"
+      },
+      "selected_program": {
+        "name": "所选程序"
+      },
+      "remaining_time": {
+        "name": "剩余时间"
+      },
+      "faults": {
+        "name": "故障码"
+      },
+      "cleaning_current_count": {
+        "name": "清洁提醒当前次数"
+      },
+      "cleaning_threshold": {
+        "name": "清洁提醒阈值"
+      },
+      "raw_eco": {
+        "name": "原始 · 节能模式"
+      },
+      "raw_ecostatus": {
+        "name": "原始 · 节能状态"
+      },
+      "raw_ai_smart_control_source": {
+        "name": "原始 · 智能控制来源"
+      },
+      "raw_capabilities": {
+        "name": "原始 · 洗衣机能力描述"
+      },
+      "raw_child_lock": {
+        "name": "原始 · 童锁"
+      },
+      "raw_cleaning_count": {
+        "name": "原始 · 筒清洁次数"
+      },
+      "raw_cleaning_reminder": {
+        "name": "原始 · 清洁提醒"
+      },
+      "raw_collection_run": {
+        "name": "原始 · 收藏模式运行"
+      },
+      "raw_consumables_remain": {
+        "name": "原始 · 耗材余量提醒"
+      },
+      "raw_detergent_intellect": {
+        "name": "原始 · 洗衣液智能投放"
+      },
+      "raw_detergent_intellect_gear": {
+        "name": "原始 · 洗衣液智能投放挡位"
+      },
+      "raw_dirty_remind_wash_cur_times": {
+        "name": "原始 · 脏污推送当前次数"
+      },
+      "raw_dirty_remind_wash_max_times": {
+        "name": "原始 · 脏污推送最大次数"
+      },
+      "raw_error_code": {
+        "name": "原始 · 故障信息"
+      },
+      "raw_fabric_softener_intellect": {
+        "name": "原始 · 柔顺剂智能投放"
+      },
+      "raw_fresh_water_rinse_mode": {
+        "name": "原始 · 活水漂洗"
+      },
+      "raw_fresh_water_rinse_status": {
+        "name": "原始 · 活水漂洗状态"
+      },
+      "raw_freshness_mode": {
+        "name": "原始 · 清新"
+      },
+      "raw_freshness_state": {
+        "name": "原始 · 清新状态"
+      },
+      "raw_freshness_time": {
+        "name": "原始 · 抗皱清新时长"
+      },
+      "raw_intelli_detect_percentage": {
+        "name": "原始 · 智能检测进度"
+      },
+      "raw_lower_shell_main_running_time": {
+        "name": "原始 · 主洗时间"
+      },
+      "raw_lower_shell_mode": {
+        "name": "原始 · 模式选择"
+      },
+      "raw_lower_shell_mode_capabilities": {
+        "name": "原始 · 洗涤模式能力描述"
+      },
+      "raw_lower_shell_order_mode": {
+        "name": "原始 · 预约模式"
+      },
+      "raw_lower_shell_order_time": {
+        "name": "原始 · 设置预约时间"
+      },
+      "raw_lower_shell_program_running_rime": {
+        "name": "原始 · 程序时间"
+      },
+      "raw_lower_shell_rinse_count": {
+        "name": "原始 · 漂洗次数"
+      },
+      "raw_lower_shell_rotate_speed": {
+        "name": "原始 · 洗涤脱水转速"
+      },
+      "raw_lower_shell_run_status": {
+        "name": "原始 · 洗涤运行状态"
+      },
+      "raw_lower_shell_stains_type": {
+        "name": "原始 · 顽渍净"
+      },
+      "raw_lower_shell_washing_count": {
+        "name": "原始 · 洗涤次数"
+      },
+      "raw_lower_shell_washing_status": {
+        "name": "原始 · 洗涤状态"
+      },
+      "raw_lower_shell_washing_temp": {
+        "name": "原始 · 运行温度"
+      },
+      "raw_lower_shell_washing_temp_set": {
+        "name": "原始 · 设置运行温度"
+      },
+      "raw_lower_shell_washing_temp_set_int": {
+        "name": "原始 · 设置运行温度-数值"
+      },
+      "raw_lower_shell_washing_time": {
+        "name": "原始 · 下筒剩余洗涤时间,包含预约时间"
+      },
+      "raw_lower_shell_washing_time_set": {
+        "name": "原始 · 洗涤时间增/减"
+      },
+      "raw_night_wash_mode": {
+        "name": "原始 · 夜间模式"
+      },
+      "raw_night_wash_state": {
+        "name": "原始 · 夜洗状态"
+      },
+      "raw_nsp_cur_attempts": {
+        "name": "原始 · nsp当前尝试次数"
+      },
+      "raw_nsp_fitting_eccentricity_value": {
+        "name": "原始 · nsp拟合后偏心值"
+      },
+      "raw_nsp_fitting_weight": {
+        "name": "原始 · nsp拟合后称重值"
+      },
+      "raw_nsp_motor_error_status": {
+        "name": "原始 · nsp电机故障状态"
+      },
+      "raw_nsp_motor_power": {
+        "name": "原始 · nsp电机功率"
+      },
+      "raw_nsp_original_eccentricity_value": {
+        "name": "原始 · nsp原始偏心值"
+      },
+      "raw_nsp_original_weight": {
+        "name": "原始 · nsp原始称重值"
+      },
+      "raw_nsp_rotate_speed": {
+        "name": "原始 · nsp实时转速"
+      },
+      "raw_nsp_water_level_freq": {
+        "name": "原始 · nsp水位频率"
+      },
+      "raw_power_switch": {
+        "name": "原始 · 电源"
+      },
+      "raw_program_memory": {
+        "name": "原始 · 程序记忆"
+      },
+      "raw_soak": {
+        "name": "原始 · 增加浸泡"
+      },
+      "raw_soak_status": {
+        "name": "原始 · 浸泡状态"
+      },
+      "raw_speed_up_mode": {
+        "name": "原始 · 加速模式"
+      },
+      "raw_speed_up_status": {
+        "name": "原始 · 加速模式状态"
+      },
+      "raw_tsl_latest_version": {
+        "name": "原始 · 物模型最新版本"
+      },
+      "raw_tsl_query_time": {
+        "name": "原始 · 物模型查询时间"
+      },
+      "raw_tsl_req_version": {
+        "name": "原始 · 物模型请求版本"
+      },
+      "raw_turn_off_spec_notification": {
+        "name": "原始 · 关闭特定通知"
+      },
+      "raw_washer_dryer_linkage": {
+        "name": "原始 · 洗烘联动"
+      },
+      "raw_wifi_drop_packet_rate": {
+        "name": "原始 · Wi-Fi 丢包率"
+      },
+      "raw_wifi_ip": {
+        "name": "原始 · Wi-Fi IP 地址"
+      },
+      "raw_wifi_mac_addr": {
+        "name": "原始 · Wi-Fi MAC 地址"
+      },
+      "raw_wifi_mode": {
+        "name": "原始 · Wi-Fi 模式"
+      },
+      "raw_wifi_rssi": {
+        "name": "原始 · Wi-Fi RSSI"
+      },
+      "raw_wifi_ssid": {
+        "name": "原始 · Wi-Fi SSID"
+      },
+      "raw_wifi_signal_strength": {
+        "name": "原始 · Wi-Fi 信号强度"
+      },
+      "dryer_raw_child_lock": {
+        "name": "原始 · 童锁"
+      },
+      "dryer_raw_collection_run": {
+        "name": "原始 · 收藏模式运行"
+      },
+      "dryer_raw_crease_resistance": {
+        "name": "原始 · 防皱功能"
+      },
+      "dryer_raw_crease_resistance_status": {
+        "name": "原始 · 防皱功能状态"
+      },
+      "dryer_raw_dry_mode_capabilities": {
+        "name": "原始 · 烘干模式能力描述"
+      },
+      "dryer_raw_dry_mute_status": {
+        "name": "原始 · 静音功能状态"
+      },
+      "dryer_raw_dry_wind_speed": {
+        "name": "原始 · 烘干风力"
+      },
+      "dryer_raw_error_code": {
+        "name": "原始 · 故障码"
+      },
+      "dryer_raw_intelli_detect_percentage": {
+        "name": "原始 · 智能检测进度"
+      },
+      "dryer_raw_low_temp_dry": {
+        "name": "原始 · 低温模式"
+      },
+      "dryer_raw_low_temp_dry_status": {
+        "name": "原始 · 低温模式运行状态"
+      },
+      "dryer_raw_lower_shell_washing_status": {
+        "name": "原始 · 烘干状态"
+      },
+      "dryer_raw_lower_shell_washing_time_set": {
+        "name": "原始 · 烘干时间增减"
+      },
+      "dryer_raw_power_switch": {
+        "name": "原始 · 电源"
+      },
+      "dryer_raw_speed_up_mode": {
+        "name": "原始 · 加速模式"
+      },
+      "dryer_raw_speed_up_status": {
+        "name": "原始 · 加速模式状态"
+      },
+      "dryer_raw_tsl_latest_version": {
+        "name": "原始 · 物模型最新版本"
+      },
+      "dryer_raw_tsl_query_time": {
+        "name": "原始 · 物模型查询时间"
+      },
+      "dryer_raw_tsl_req_version": {
+        "name": "原始 · 物模型请求版本"
+      },
+      "dryer_raw_uv_sterilize": {
+        "name": "原始 · UV除菌"
+      },
+      "dryer_raw_wash_mute_mode": {
+        "name": "原始 · 静音功能"
+      },
+      "dryer_raw_wash_shell_dry_mode": {
+        "name": "原始 · 烘干模式"
+      },
+      "dryer_raw_wash_shell_mode": {
+        "name": "原始 · 模式选择"
+      },
+      "dryer_raw_wash_shell_order_mode": {
+        "name": "原始 · 预约模式"
+      },
+      "dryer_raw_wash_shell_order_time": {
+        "name": "原始 · 预约时间"
+      },
+      "dryer_raw_wash_shell_run_status": {
+        "name": "原始 · 运行状态"
+      },
+      "dryer_raw_wash_shell_washing_temp": {
+        "name": "原始 · 运行温度"
+      },
+      "dryer_raw_wash_shell_washing_time": {
+        "name": "原始 · 剩余运行时间,包含预约时间"
+      },
+      "dryer_raw_washing_time": {
+        "name": "原始 · 烘干时间"
+      },
+      "dryer_raw_water_box_status": {
+        "name": "原始 · 储水盒状态"
+      },
+      "dryer_raw_wifi_drop_packet_rate": {
+        "name": "原始 · Wi-Fi 丢包率"
+      },
+      "dryer_raw_wifi_ip": {
+        "name": "原始 · Wi-Fi IP 地址"
+      },
+      "dryer_raw_wifi_mac_addr": {
+        "name": "原始 · Wi-Fi MAC 地址"
+      },
+      "dryer_raw_wifi_mode": {
+        "name": "原始 · Wi-Fi 模式"
+      },
+      "dryer_raw_wifi_rssi": {
+        "name": "原始 · Wi-Fi RSSI"
+      },
+      "dryer_raw_wifi_ssid": {
+        "name": "原始 · Wi-Fi SSID"
+      },
+      "dryer_raw_wifi_signal_strength": {
+        "name": "原始 · Wi-Fi 信号强度"
+      }
+    },
+    "button": {
+      "washer_power_on": {
+        "name": "洗衣机开机"
+      },
+      "washer_start": {
+        "name": "启动／继续洗涤"
+      },
+      "washer_pause": {
+        "name": "暂停洗涤"
+      },
+      "dryer_power_on": {
+        "name": "干衣机开机"
+      },
+      "dryer_start": {
+        "name": "启动／继续烘干"
+      },
+      "dryer_pause": {
+        "name": "暂停烘干"
+      }
+    },
+    "number": {
+      "control_lower_shell_washing_temp_set_int": {
+        "name": "设置运行温度-数值"
+      },
+      "control_lower_shell_rinse_count": {
+        "name": "漂洗次数"
+      },
+      "control_cleaning_count": {
+        "name": "筒清洁次数"
+      },
+      "control_lower_shell_order_time": {
+        "name": "设置预约时间"
+      },
+      "control_lower_shell_washing_count": {
+        "name": "洗涤次数"
+      },
+      "control_freshness_time": {
+        "name": "抗皱清新时长"
+      },
+      "dryer_control_washing_time": {
+        "name": "烘干时间"
+      },
+      "dryer_control_wash_shell_washing_time": {
+        "name": "剩余运行时间,包含预约时间"
+      },
+      "dryer_control_wash_shell_washing_temp": {
+        "name": "运行温度"
+      },
+      "dryer_control_wash_shell_order_time": {
+        "name": "预约时间"
+      }
+    },
+    "select": {
+      "control_lower_shell_washing_temp_set": {
+        "name": "设置运行温度"
+      },
+      "control_lower_shell_rotate_speed": {
+        "name": "洗涤脱水转速"
+      },
+      "control_lower_shell_run_status": {
+        "name": "洗涤运行状态"
+      },
+      "control_lower_shell_mode": {
+        "name": "模式选择"
+      },
+      "control_lower_shell_stains_type": {
+        "name": "顽渍净"
+      },
+      "control_lower_shell_washing_time_set": {
+        "name": "洗涤时间增/减"
+      },
+      "control_detergent_intellect_gear": {
+        "name": "洗衣液智能投放挡位"
+      },
+      "control_collection_run": {
+        "name": "收藏模式运行"
+      },
+      "dryer_control_wash_shell_mode": {
+        "name": "模式选择"
+      },
+      "dryer_control_wash_shell_dry_mode": {
+        "name": "烘干模式"
+      },
+      "dryer_control_lower_shell_washing_time_set": {
+        "name": "烘干时间增减"
+      },
+      "dryer_control_dry_wind_speed": {
+        "name": "烘干风力"
+      },
+      "dryer_control_wash_shell_run_status": {
+        "name": "运行状态"
+      },
+      "dryer_control_lower_shell_washing_status": {
+        "name": "烘干状态"
+      },
+      "dryer_control_collection_run": {
+        "name": "收藏模式运行"
+      }
+    },
+    "switch": {
+      "control_power_switch": {
+        "name": "电源"
+      },
+      "control_freshness_mode": {
+        "name": "清新"
+      },
+      "control_child_lock": {
+        "name": "童锁"
+      },
+      "control_lower_shell_order_mode": {
+        "name": "预约模式"
+      },
+      "control_fresh_water_rinse_mode": {
+        "name": "活水漂洗"
+      },
+      "control_speed_up_mode": {
+        "name": "加速模式"
+      },
+      "control_night_wash_mode": {
+        "name": "夜间模式"
+      },
+      "control_program_memory": {
+        "name": "程序记忆"
+      },
+      "control_soak_status": {
+        "name": "浸泡状态"
+      },
+      "control_soak": {
+        "name": "增加浸泡"
+      },
+      "control_washer_dryer_linkage": {
+        "name": "洗烘联动"
+      },
+      "control_eco": {
+        "name": "节能模式"
+      },
+      "control_fabric_softener_intellect": {
+        "name": "柔顺剂智能投放"
+      },
+      "control_detergent_intellect": {
+        "name": "洗衣液智能投放"
+      },
+      "control_turn_off_spec_notification_0": {
+        "name": "洗涤剂缺失通知"
+      },
+      "control_turn_off_spec_notification_1": {
+        "name": "柔顺剂缺失通知"
+      },
+      "dryer_control_power_switch": {
+        "name": "电源"
+      },
+      "dryer_control_child_lock": {
+        "name": "童锁"
+      },
+      "dryer_control_crease_resistance": {
+        "name": "防皱功能"
+      },
+      "dryer_control_wash_mute_mode": {
+        "name": "静音功能"
+      },
+      "dryer_control_speed_up_mode": {
+        "name": "加速模式"
+      },
+      "dryer_control_low_temp_dry": {
+        "name": "低温模式"
+      },
+      "dryer_control_wash_shell_order_mode": {
+        "name": "预约模式"
+      },
+      "dryer_control_uv_sterilize": {
+        "name": "UV除菌"
+      },
+      "dryer_control_error_code_1": {
+        "name": "故障码 dC 启动后，门未锁上"
+      },
+      "dryer_control_error_code_2": {
+        "name": "故障码 E11 干衣机浮子开关导通异常"
+      },
+      "dryer_control_error_code_3": {
+        "name": "故障码 E12 蒸汽护理发生器浮子开关异常"
+      },
+      "dryer_control_error_code_4": {
+        "name": "故障码 E41 压缩机温度传感器故障"
+      },
+      "dryer_control_error_code_5": {
+        "name": "故障码 E42 风道温度传感器故障"
+      },
+      "dryer_control_error_code_6": {
+        "name": "故障码 E51 变频筒电机故障"
+      },
+      "dryer_control_error_code_7": {
+        "name": "故障码 E52 变频压缩机故障"
+      },
+      "dryer_control_error_code_8": {
+        "name": "故障码 E61 筒电机变频板故障"
+      },
+      "dryer_control_error_code_9": {
+        "name": "故障码 E62 压缩机变频板故障"
+      },
+      "dryer_control_error_code_10": {
+        "name": "故障码 E71 主、显板通讯故障"
+      },
+      "dryer_control_error_code_11": {
+        "name": "故障码 E72 主板与筒电机变频通讯故障"
+      },
+      "dryer_control_error_code_12": {
+        "name": "故障码 E73 主板与压缩机变频通讯故障"
+      },
+      "dryer_control_error_code_13": {
+        "name": "故障码 E21 蒸汽发生器加热异常故障"
+      },
+      "dryer_control_error_code_14": {
+        "name": "故障码 E43 整机前侧温度传感器故障"
+      },
+      "dryer_control_error_code_15": {
+        "name": "故障码 E44 蒸汽发生器温度传感器故障"
+      },
+      "dryer_control_error_code_16": {
+        "name": "故障码 Ful 排水浮子开关异常"
+      }
+    }
+  }
+}

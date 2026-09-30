@@ -1,0 +1,482 @@
+{
+  "response": {
+    "data": {
+      "productKey": "11160501018",
+      "tslVersion": "V3.0.84",
+      "properties": [
+        {
+          "identifier": "washingTime",
+          "name": "烘干时间",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "int",
+            "mappingType": "int",
+            "specs": {
+              "max": "1440",
+              "min": "0",
+              "step": "1",
+              "unit": "min",
+              "unitName": "分"
+            }
+          }
+        },
+        {
+          "identifier": "washShellWashingTime",
+          "name": "剩余运行时间,包含预约时间",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "int",
+            "mappingType": "int",
+            "specs": {
+              "max": "1440",
+              "min": "0",
+              "step": "1",
+              "unit": "min",
+              "unitName": "分"
+            }
+          }
+        },
+        {
+          "identifier": "powerSwitch",
+          "name": "电源",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "bool",
+            "mappingType": "bool",
+            "specs": {
+              "0": "关闭",
+              "1": "开启"
+            }
+          }
+        },
+        {
+          "identifier": "childLock",
+          "name": "童锁",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "bool",
+            "mappingType": "bool",
+            "specs": {
+              "0": "关闭",
+              "1": "开启"
+            }
+          }
+        },
+        {
+          "identifier": "washShellMode",
+          "name": "模式选择",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "enum",
+            "mappingType": "enum",
+            "specs": {
+              "0": "混合",
+              "1": "快烘",
+              "2": "衬衫",
+              "4": "婴儿服",
+              "5": "羽绒",
+              "6": "棉麻",
+              "7": "羊毛",
+              "8": "真丝",
+              "10": "除菌螨",
+              "12": "大件",
+              "14": "空气洗",
+              "15": "热风清新",
+              "16": "童装",
+              "17": "内衣",
+              "18": "毛巾",
+              "19": "运动服",
+              "20": "冷风护理",
+              "21": "家纺",
+              "22": "冲锋衣",
+              "23": "轻柔",
+              "24": "化纤",
+              "25": "牛仔",
+              "26": "蚕丝被",
+              "27": "AI智慧烘"
+            }
+          }
+        },
+        {
+          "identifier": "washShellDryMode",
+          "name": "烘干模式",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "enum",
+            "mappingType": "enum",
+            "specs": {
+              "0": "熨烫",
+              "1": "即穿",
+              "2": "储藏",
+              "3": "智能"
+            }
+          }
+        },
+        {
+          "identifier": "washShellWashingTemp",
+          "name": "运行温度",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "int",
+            "mappingType": "int",
+            "specs": {
+              "max": "100",
+              "min": "0",
+              "step": "1",
+              "unit": "NA",
+              "unitName": "NA"
+            }
+          }
+        },
+        {
+          "identifier": "lowerShellWashingTimeSet",
+          "name": "烘干时间增减",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "enum",
+            "mappingType": "enum",
+            "specs": {
+              "1": "默认时间",
+              "3": "+10分钟",
+              "5": "+20分钟",
+              "7": "+30分钟",
+              "9": "+40分钟",
+              "11": "+50分钟",
+              "13": "+60分钟",
+              "15": "+70分钟",
+              "17": "+80分钟",
+              "19": "+90分钟",
+              "21": "+100分钟",
+              "23": "+110分钟",
+              "25": "+120分钟",
+              "27": "+130分钟",
+              "29": "+140分钟",
+              "31": "+150分钟",
+              "113": "-60分钟",
+              "125": "-120分钟"
+            }
+          }
+        },
+        {
+          "identifier": "creaseResistanceStatus",
+          "name": "防皱功能状态",
+          "accessMode": "r",
+          "dataType": {
+            "type": "bool",
+            "mappingType": "bool",
+            "specs": {
+              "0": "防皱功能运行完毕",
+              "1": "防皱功能运行中"
+            }
+          }
+        },
+        {
+          "identifier": "creaseResistance",
+          "name": "防皱功能",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "bool",
+            "mappingType": "bool",
+            "specs": {
+              "0": "关闭",
+              "1": "开启"
+            }
+          }
+        },
+        {
+          "identifier": "dryMuteStatus",
+          "name": "静音功能状态",
+          "accessMode": "r",
+          "dataType": {
+            "type": "bool",
+            "mappingType": "bool",
+            "specs": {
+              "0": "静音功能运行完毕",
+              "1": "静音功能运行中"
+            }
+          }
+        },
+        {
+          "identifier": "washMuteMode",
+          "name": "静音功能",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "bool",
+            "mappingType": "bool",
+            "specs": {
+              "0": "关闭",
+              "1": "开启"
+            }
+          }
+        },
+        {
+          "identifier": "speedUpStatus",
+          "name": "加速模式状态",
+          "accessMode": "r",
+          "dataType": {
+            "type": "bool",
+            "mappingType": "bool",
+            "specs": {
+              "0": "加速模式运行完毕",
+              "1": "加速模式运行中"
+            }
+          }
+        },
+        {
+          "identifier": "speedUpMode",
+          "name": "加速模式",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "bool",
+            "mappingType": "bool",
+            "specs": {
+              "0": "关闭",
+              "1": "开启"
+            }
+          }
+        },
+        {
+          "identifier": "lowTempDryStatus",
+          "name": "低温模式运行状态",
+          "accessMode": "r",
+          "dataType": {
+            "type": "bool",
+            "mappingType": "bool",
+            "specs": {
+              "0": "低温模式运行完毕",
+              "1": "低温模式运行中"
+            }
+          }
+        },
+        {
+          "identifier": "lowTempDry",
+          "name": "低温模式",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "bool",
+            "mappingType": "bool",
+            "specs": {
+              "0": "关闭",
+              "1": "开启"
+            }
+          }
+        },
+        {
+          "identifier": "dryWindSpeed",
+          "name": "烘干风力",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "enum",
+            "mappingType": "enum",
+            "specs": {
+              "0": "智能",
+              "1": "柔风",
+              "2": "标准",
+              "3": "强劲"
+            }
+          }
+        },
+        {
+          "identifier": "washShellOrderTime",
+          "name": "预约时间",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "int",
+            "mappingType": "int",
+            "specs": {
+              "max": "1440",
+              "min": "0",
+              "step": "1",
+              "unit": "min",
+              "unitName": "分"
+            }
+          }
+        },
+        {
+          "identifier": "washShellOrderMode",
+          "name": "预约模式",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "bool",
+            "mappingType": "bool",
+            "specs": {
+              "0": "关闭",
+              "1": "开启"
+            }
+          }
+        },
+        {
+          "identifier": "intelliDetectPercentage",
+          "name": "智能检测进度",
+          "accessMode": "r",
+          "dataType": {
+            "type": "int",
+            "mappingType": "int",
+            "specs": {
+              "max": "100",
+              "min": "0",
+              "step": "1",
+              "unit": "%",
+              "unitName": "百分比"
+            }
+          }
+        },
+        {
+          "identifier": "uvSterilize",
+          "name": "UV除菌",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "bool",
+            "mappingType": "bool",
+            "specs": {
+              "0": "关闭",
+              "1": "开启"
+            }
+          }
+        },
+        {
+          "identifier": "dryModeCapabilities",
+          "name": "烘干模式能力描述",
+          "accessMode": "r",
+          "dataType": {
+            "type": "array",
+            "mappingType": "array-enum",
+            "specs": {
+              "item": {
+                "mappingType": "array-enum",
+                "specs": {
+                  "0": "混合",
+                  "1": "快烘",
+                  "2": "衬衫",
+                  "3": "四件套",
+                  "4": "婴儿",
+                  "5": "羽绒",
+                  "6": "棉麻",
+                  "7": "羊毛",
+                  "8": "真丝",
+                  "9": "清新祛味",
+                  "10": "除螨除潮",
+                  "11": "热风暖衣",
+                  "12": "大件",
+                  "13": "晒被子",
+                  "14": "空气洗",
+                  "15": "热风定时",
+                  "16": "童装",
+                  "17": "内衣",
+                  "18": "毛巾",
+                  "19": "运动服",
+                  "20": "冷风清新",
+                  "21": "家纺",
+                  "22": "冲锋衣",
+                  "23": "轻柔",
+                  "24": "化纤",
+                  "25": "牛仔",
+                  "26": "蚕丝被",
+                  "27": "AI智慧烘"
+                },
+                "type": "enum"
+              },
+              "size": 28
+            }
+          }
+        },
+        {
+          "identifier": "washShellRunStatus",
+          "name": "运行状态",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "enum",
+            "mappingType": "enum",
+            "specs": {
+              "0": "待机",
+              "1": "暂停",
+              "2": "运行"
+            }
+          }
+        },
+        {
+          "identifier": "lowerShellWashingStatus",
+          "name": "烘干状态",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "enum",
+            "mappingType": "enum",
+            "specs": {
+              "0": "预约等待",
+              "1": "烘干",
+              "2": "已完成",
+              "3": "防皱",
+              "4": "数据同步中",
+              "5": "检测含水率",
+              "6": "AUTO"
+            }
+          }
+        },
+        {
+          "identifier": "collectionRun",
+          "name": "收藏模式运行",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "enum",
+            "mappingType": "enum",
+            "specs": {
+              "0": "未运行收藏",
+              "1": "收藏1",
+              "2": "收藏2",
+              "3": "收藏3",
+              "4": "收藏4",
+              "5": "收藏5"
+            }
+          }
+        },
+        {
+          "identifier": "waterBoxStatus",
+          "name": "储水盒状态",
+          "accessMode": "r",
+          "dataType": {
+            "type": "enum",
+            "mappingType": "enum",
+            "specs": {
+              "0": "未满",
+              "1": "已满"
+            }
+          }
+        },
+        {
+          "identifier": "errorCode",
+          "name": "故障码",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "array",
+            "mappingType": "array-enum",
+            "specs": {
+              "item": {
+                "specs": {
+                  "1": "dC 启动后，门未锁上",
+                  "2": "E11 干衣机浮子开关导通异常",
+                  "3": "E12 蒸汽护理发生器浮子开关异常",
+                  "4": "E41 压缩机温度传感器故障",
+                  "5": "E42 风道温度传感器故障",
+                  "6": "E51 变频筒电机故障",
+                  "7": "E52 变频压缩机故障",
+                  "8": "E61 筒电机变频板故障",
+                  "9": "E62 压缩机变频板故障",
+                  "10": "E71 主、显板通讯故障",
+                  "11": "E72 主板与筒电机变频通讯故障",
+                  "12": "E73 主板与压缩机变频通讯故障",
+                  "13": "E21 蒸汽发生器加热异常故障",
+                  "14": "E43 整机前侧温度传感器故障",
+                  "15": "E44 蒸汽发生器温度传感器故障",
+                  "16": "Ful 排水浮子开关异常"
+                },
+                "mappingType": "array-enum",
+                "type": "enum"
+              },
+              "size": 16
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,956 @@
+{
+  "response": {
+    "data": {
+      "productKey": "11160101096",
+      "tslVersion": "V3.0.152",
+      "properties": [
+        {
+          "identifier": "lowerShellWashingTempSetInt",
+          "name": "设置运行温度-数值",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "int",
+            "mappingType": "int",
+            "specs": {
+              "max": "100",
+              "min": "0",
+              "step": "1",
+              "unit": "°C",
+              "unitName": "摄氏度"
+            }
+          }
+        },
+        {
+          "identifier": "lowerShellWashingTemp",
+          "name": "运行温度",
+          "accessMode": "r",
+          "dataType": {
+            "type": "int",
+            "mappingType": "int",
+            "specs": {
+              "max": "100",
+              "min": "0",
+              "step": "1",
+              "unit": "NA",
+              "unitName": "NA"
+            }
+          }
+        },
+        {
+          "identifier": "lowerShellWashingTempSet",
+          "name": "设置运行温度",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "enum",
+            "mappingType": "enum",
+            "specs": {
+              "0": "常温",
+              "2": "30℃",
+              "4": "40℃",
+              "6": "60℃",
+              "8": "90℃"
+            }
+          }
+        },
+        {
+          "identifier": "lowerShellRinseCount",
+          "name": "漂洗次数",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "int",
+            "mappingType": "int",
+            "specs": {
+              "max": "6",
+              "min": "0",
+              "step": "1",
+              "unit": "次",
+              "unitName": "次"
+            }
+          }
+        },
+        {
+          "identifier": "lowerShellWashingStatus",
+          "name": "洗涤状态",
+          "accessMode": "r",
+          "dataType": {
+            "type": "enum",
+            "mappingType": "enum",
+            "specs": {
+              "0": "预约等待",
+              "1": "洗涤",
+              "2": "漂洗",
+              "3": "脱水",
+              "4": "烘干",
+              "5": "清新",
+              "6": "已完成",
+              "7": "除皱阶段",
+              "9": "进水",
+              "10": "检测衣物量",
+              "11": "检测吸水性",
+              "12": "检测脏污度"
+            }
+          }
+        },
+        {
+          "identifier": "lowerShellRotateSpeed",
+          "name": "洗涤脱水转速",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "enum",
+            "mappingType": "enum",
+            "specs": {
+              "0": "免脱",
+              "1": "400",
+              "3": "800",
+              "4": "1000",
+              "6": "1400"
+            }
+          }
+        },
+        {
+          "identifier": "lowerShellWashingTime",
+          "name": "下筒剩余洗涤时间,包含预约时间",
+          "accessMode": "r",
+          "dataType": {
+            "type": "int",
+            "mappingType": "int",
+            "specs": {
+              "max": "1440",
+              "min": "0",
+              "step": "1",
+              "unit": "NA",
+              "unitName": "NA"
+            }
+          }
+        },
+        {
+          "identifier": "lowerShellProgramRunningRime",
+          "name": "程序时间",
+          "accessMode": "r",
+          "dataType": {
+            "type": "int",
+            "mappingType": "int",
+            "specs": {
+              "max": "1440",
+              "min": "0",
+              "step": "1",
+              "unit": "NA",
+              "unitName": "NA"
+            }
+          }
+        },
+        {
+          "identifier": "lowerShellRunStatus",
+          "name": "洗涤运行状态",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "enum",
+            "mappingType": "enum",
+            "specs": {
+              "0": "待机",
+              "1": "暂停",
+              "2": "运行"
+            }
+          }
+        },
+        {
+          "identifier": "powerSwitch",
+          "name": "电源",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "bool",
+            "mappingType": "bool",
+            "specs": {
+              "0": "关闭",
+              "1": "开启"
+            }
+          }
+        },
+        {
+          "identifier": "lowerShellMainRunningTime",
+          "name": "主洗时间",
+          "accessMode": "r",
+          "dataType": {
+            "type": "int",
+            "mappingType": "int",
+            "specs": {
+              "max": "1440",
+              "min": "0",
+              "step": "1",
+              "unit": "NA",
+              "unitName": "NA"
+            }
+          }
+        },
+        {
+          "identifier": "freshnessState",
+          "name": "清新状态",
+          "accessMode": "r",
+          "dataType": {
+            "type": "bool",
+            "mappingType": "bool",
+            "specs": {
+              "0": "衣物清新完成",
+              "1": "衣物清新中"
+            }
+          }
+        },
+        {
+          "identifier": "freshnessMode",
+          "name": "清新",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "bool",
+            "mappingType": "bool",
+            "specs": {
+              "0": "关闭",
+              "1": "开启"
+            }
+          }
+        },
+        {
+          "identifier": "childLock",
+          "name": "童锁",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "bool",
+            "mappingType": "bool",
+            "specs": {
+              "0": "关闭",
+              "1": "打开"
+            }
+          }
+        },
+        {
+          "identifier": "cleaningReminder",
+          "name": "清洁提醒",
+          "accessMode": "r",
+          "dataType": {
+            "type": "bool",
+            "mappingType": "bool",
+            "specs": {
+              "0": "关闭",
+              "1": "开启"
+            }
+          }
+        },
+        {
+          "identifier": "cleaningCount",
+          "name": "筒清洁次数",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "int",
+            "mappingType": "int",
+            "specs": {
+              "max": "1440",
+              "min": "0",
+              "step": "1",
+              "unit": "次",
+              "unitName": "次"
+            }
+          }
+        },
+        {
+          "identifier": "lowerShellOrderMode",
+          "name": "预约模式",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "bool",
+            "mappingType": "bool",
+            "specs": {
+              "0": "关闭",
+              "1": "开启"
+            }
+          }
+        },
+        {
+          "identifier": "lowerShellOrderTime",
+          "name": "设置预约时间",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "int",
+            "mappingType": "int",
+            "specs": {
+              "max": "1440",
+              "min": "0",
+              "step": "1",
+              "unit": "NA",
+              "unitName": "NA"
+            }
+          }
+        },
+        {
+          "identifier": "lowerShellMode",
+          "name": "模式选择",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "enum",
+            "mappingType": "enum",
+            "specs": {
+              "0": "混合",
+              "1": "快洗",
+              "2": "羊毛",
+              "3": "大件",
+              "4": "真丝",
+              "5": "超净",
+              "6": "热力除菌",
+              "9": "单脱水",
+              "10": "漂+脱",
+              "11": "筒清洁",
+              "14": "羽绒",
+              "15": "棉麻",
+              "16": "运动服",
+              "17": "衬衫",
+              "18": "内衣",
+              "21": "巴氏除菌",
+              "23": "除菌螨",
+              "26": "童装",
+              "29": "护色",
+              "33": "冲锋衣",
+              "35": "AI智慧洗"
+            }
+          }
+        },
+        {
+          "identifier": "lowerShellWashingCount",
+          "name": "洗涤次数",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "int",
+            "mappingType": "int",
+            "specs": {
+              "max": "1440",
+              "min": "0",
+              "step": "1",
+              "unit": "次",
+              "unitName": "次"
+            }
+          }
+        },
+        {
+          "identifier": "lowerShellStainsType",
+          "name": "顽渍净",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "enum",
+            "mappingType": "enum",
+            "specs": {
+              "0": "关闭",
+              "2": "油渍",
+              "3": "红酒渍",
+              "4": "水果渍",
+              "6": "混渍",
+              "7": "奶渍",
+              "8": "血渍",
+              "9": "妆渍"
+            }
+          }
+        },
+        {
+          "identifier": "freshWaterRinseStatus",
+          "name": "活水漂洗状态",
+          "accessMode": "r",
+          "dataType": {
+            "type": "bool",
+            "mappingType": "bool",
+            "specs": {
+              "0": "活水漂洗结束",
+              "1": "活水漂洗中"
+            }
+          }
+        },
+        {
+          "identifier": "freshWaterRinseMode",
+          "name": "活水漂洗",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "bool",
+            "mappingType": "bool",
+            "specs": {
+              "0": "关闭",
+              "1": "开启"
+            }
+          }
+        },
+        {
+          "identifier": "speedUpStatus",
+          "name": "加速模式状态",
+          "accessMode": "r",
+          "dataType": {
+            "type": "bool",
+            "mappingType": "bool",
+            "specs": {
+              "0": "加速模式运行完毕",
+              "1": "加速模式运行中"
+            }
+          }
+        },
+        {
+          "identifier": "speedUpMode",
+          "name": "加速模式",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "bool",
+            "mappingType": "bool",
+            "specs": {
+              "0": "关闭",
+              "1": "开启"
+            }
+          }
+        },
+        {
+          "identifier": "nightWashState",
+          "name": "夜洗状态",
+          "accessMode": "r",
+          "dataType": {
+            "type": "bool",
+            "mappingType": "bool",
+            "specs": {
+              "0": "衣物夜洗完成",
+              "1": "衣物夜洗中"
+            }
+          }
+        },
+        {
+          "identifier": "nightWashMode",
+          "name": "夜洗",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "bool",
+            "mappingType": "bool",
+            "specs": {
+              "0": "关闭",
+              "1": "开启"
+            }
+          }
+        },
+        {
+          "identifier": "consumablesRemain",
+          "name": "耗材余量提醒",
+          "accessMode": "r",
+          "dataType": {
+            "type": "array",
+            "mappingType": "array-enum",
+            "specs": {
+              "item": {
+                "mappingType": "array-enum",
+                "specs": {
+                  "0": "耗材充足",
+                  "1": "洗衣液不足",
+                  "2": "柔顺剂不足"
+                },
+                "type": "enum"
+              },
+              "size": "3"
+            }
+          }
+        },
+        {
+          "identifier": "lowerShellWashingTimeSet",
+          "name": "洗涤时间增/减",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "enum",
+            "mappingType": "enum",
+            "specs": {
+              "0": "取消主洗",
+              "1": "默认时间",
+              "2": "+5分钟",
+              "3": "+10分钟",
+              "5": "+20分钟"
+            }
+          }
+        },
+        {
+          "identifier": "programMemory",
+          "name": "程序记忆",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "bool",
+            "mappingType": "bool",
+            "specs": {
+              "0": "关闭",
+              "1": "开启"
+            }
+          }
+        },
+        {
+          "identifier": "capabilities",
+          "name": "洗衣机能力描述",
+          "accessMode": "r",
+          "dataType": {
+            "type": "array",
+            "mappingType": "array-enum",
+            "specs": {
+              "item": {
+                "mappingType": "array-enum",
+                "specs": {
+                  "0": "所有功能都无",
+                  "1": "抗皱清新可调时长",
+                  "2": "洗衣液智能投放可调档位"
+                },
+                "type": "enum"
+              },
+              "size": 3
+            }
+          }
+        },
+        {
+          "identifier": "detergentIntellectGear",
+          "name": "洗衣液智能投放挡位",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "enum",
+            "mappingType": "enum",
+            "specs": {
+              "0": "关闭",
+              "1": "智能",
+              "2": "L1（少量）",
+              "3": "L2（中等）",
+              "4": "L3（多量）"
+            }
+          }
+        },
+        {
+          "identifier": "freshnessTime",
+          "name": "抗皱清新时长",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "int",
+            "mappingType": "int",
+            "specs": {
+              "max": "20",
+              "min": "1",
+              "step": "1",
+              "unit": "h",
+              "unitName": "时"
+            }
+          }
+        },
+        {
+          "identifier": "lowerShellModeCapabilities",
+          "name": "洗涤模式能力描述",
+          "accessMode": "r",
+          "dataType": {
+            "type": "array",
+            "mappingType": "array-enum",
+            "specs": {
+              "item": {
+                "mappingType": "array-enum",
+                "specs": {
+                  "0": "混合",
+                  "1": "快洗",
+                  "2": "羊毛",
+                  "3": "大件",
+                  "4": "真丝洗",
+                  "5": "超净洗",
+                  "6": "热力除菌",
+                  "7": "单烘干",
+                  "8": "快洗烘40",
+                  "9": "单脱",
+                  "10": "漂+脱",
+                  "11": "筒清洁",
+                  "12": "智能洗",
+                  "13": "消毒洗",
+                  "14": "羽绒",
+                  "15": "棉麻",
+                  "16": "运动",
+                  "17": "衬衣",
+                  "18": "内衣",
+                  "19": "牛仔",
+                  "20": "空气洗",
+                  "21": "蒸汽除菌",
+                  "23": "除螨",
+                  "24": "低温柔烘",
+                  "25": "婴儿洗",
+                  "26": "童装",
+                  "27": "快洗烘60",
+                  "28": "香薰/除菌",
+                  "29": "护色洗",
+                  "30": "柔和",
+                  "31": "ECO40/60",
+                  "32": "20",
+                  "33": "冲锋衣",
+                  "34": "化纤",
+                  "35": "AI智慧洗"
+                },
+                "type": "enum"
+              },
+              "size": "35"
+            }
+          }
+        },
+        {
+          "identifier": "soakStatus",
+          "name": "浸泡状态",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "bool",
+            "mappingType": "bool",
+            "specs": {
+              "0": "浸泡运行结束",
+              "1": "浸泡运行中"
+            }
+          }
+        },
+        {
+          "identifier": "soak",
+          "name": "浸泡",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "bool",
+            "mappingType": "bool",
+            "specs": {
+              "0": "关闭",
+              "1": "开启"
+            }
+          }
+        },
+        {
+          "identifier": "washerDryerLinkage",
+          "name": "洗烘联动",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "bool",
+            "mappingType": "bool",
+            "specs": {
+              "0": "关闭",
+              "1": "开启"
+            }
+          }
+        },
+        {
+          "identifier": "ECO",
+          "name": "节能",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "bool",
+            "mappingType": "bool",
+            "specs": {
+              "0": "关闭",
+              "1": "开启"
+            }
+          }
+        },
+        {
+          "identifier": "ECOStatus",
+          "name": "节能状态",
+          "accessMode": "r",
+          "dataType": {
+            "type": "bool",
+            "mappingType": "bool",
+            "specs": {
+              "0": "节能运行结束",
+              "1": "节能运行中"
+            }
+          }
+        },
+        {
+          "identifier": "dirtyRemindWashCurTimes",
+          "name": "脏污推送当前次数",
+          "accessMode": "r",
+          "dataType": {
+            "type": "int",
+            "mappingType": "int",
+            "specs": {
+              "max": "65535",
+              "min": "0",
+              "step": "1",
+              "unit": "NA",
+              "unitName": "NA"
+            }
+          }
+        },
+        {
+          "identifier": "dirtyRemindWashMaxTimes",
+          "name": "脏污推送最大次数",
+          "accessMode": "r",
+          "dataType": {
+            "type": "int",
+            "mappingType": "int",
+            "specs": {
+              "max": "65535",
+              "min": "0",
+              "step": "1",
+              "unit": "NA",
+              "unitName": "NA"
+            }
+          }
+        },
+        {
+          "identifier": "fabricSoftenerIntellect",
+          "name": "柔顺剂智能投放",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "bool",
+            "mappingType": "bool",
+            "specs": {
+              "0": "关闭",
+              "1": "开启"
+            }
+          }
+        },
+        {
+          "identifier": "detergentIntellect",
+          "name": "洗衣液智能投放",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "bool",
+            "mappingType": "bool",
+            "specs": {
+              "0": "关闭",
+              "1": "开启"
+            }
+          }
+        },
+        {
+          "identifier": "collectionRun",
+          "name": "收藏模式运行",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "enum",
+            "mappingType": "enum",
+            "specs": {
+              "0": "未运行收藏",
+              "1": "收藏1",
+              "2": "收藏2",
+              "3": "收藏3",
+              "4": "收藏4",
+              "5": "收藏5"
+            }
+          }
+        },
+        {
+          "identifier": "intelliDetectPercentage",
+          "name": "智能检测进度",
+          "accessMode": "r",
+          "dataType": {
+            "type": "int",
+            "mappingType": "int",
+            "specs": {
+              "max": "100",
+              "min": "0",
+              "step": "1",
+              "unit": "%",
+              "unitName": "百分比"
+            }
+          }
+        },
+        {
+          "identifier": "turnOffSpecNotification",
+          "name": "关闭特定通知",
+          "accessMode": "rw",
+          "dataType": {
+            "type": "array",
+            "mappingType": "array-enum",
+            "specs": {
+              "item": {
+                "mappingType": "array-enum",
+                "specs": {
+                  "0": "洗衣液缺少通知",
+                  "1": "柔顺剂缺少通知"
+                },
+                "type": "enum"
+              },
+              "size": 2
+            }
+          }
+        },
+        {
+          "identifier": "nspMotorPower",
+          "name": "nsp电机功率",
+          "accessMode": "r",
+          "dataType": {
+            "type": "int",
+            "mappingType": "int",
+            "specs": {
+              "max": "3000",
+              "min": "0",
+              "step": "1",
+              "unit": "NA",
+              "unitName": "NA"
+            }
+          }
+        },
+        {
+          "identifier": "nspFittingEccentricityValue",
+          "name": "nsp拟合后偏心值",
+          "accessMode": "r",
+          "dataType": {
+            "type": "int",
+            "mappingType": "int",
+            "specs": {
+              "max": "3000",
+              "min": "0",
+              "step": "1",
+              "unit": "NA",
+              "unitName": "NA"
+            }
+          }
+        },
+        {
+          "identifier": "nspRotateSpeed",
+          "name": "nsp实时转速",
+          "accessMode": "r",
+          "dataType": {
+            "type": "int",
+            "mappingType": "int",
+            "specs": {
+              "max": "3000",
+              "min": "0",
+              "step": "1",
+              "unit": "NA",
+              "unitName": "NA"
+            }
+          }
+        },
+        {
+          "identifier": "nspCurAttempts",
+          "name": "nsp当前尝试次数",
+          "accessMode": "r",
+          "dataType": {
+            "type": "int",
+            "mappingType": "int",
+            "specs": {
+              "max": "3000",
+              "min": "0",
+              "step": "1",
+              "unit": "次",
+              "unitName": "次"
+            }
+          }
+        },
+        {
+          "identifier": "nspOriginalEccentricityValue",
+          "name": "nsp原始偏心值",
+          "accessMode": "r",
+          "dataType": {
+            "type": "int",
+            "mappingType": "int",
+            "specs": {
+              "max": "65536",
+              "min": "0",
+              "step": "1",
+              "unit": "NA",
+              "unitName": "NA"
+            }
+          }
+        },
+        {
+          "identifier": "nspFittingWeight",
+          "name": "nsp拟合后称重值",
+          "accessMode": "r",
+          "dataType": {
+            "type": "float",
+            "mappingType": "int32_100",
+            "specs": {
+              "max": "50",
+              "min": "0",
+              "step": "0.01",
+              "unit": "NA",
+              "unitName": "NA"
+            }
+          }
+        },
+        {
+          "identifier": "nspOriginalWeight",
+          "name": "nsp原始称重值",
+          "accessMode": "r",
+          "dataType": {
+            "type": "int",
+            "mappingType": "int",
+            "specs": {
+              "max": "65536",
+              "min": "0",
+              "step": "1",
+              "unit": "NA",
+              "unitName": "NA"
+            }
+          }
+        },
+        {
+          "identifier": "nspWaterLevelFreq",
+          "name": "nsp水位频率",
+          "accessMode": "r",
+          "dataType": {
+            "type": "int",
+            "mappingType": "int",
+            "specs": {
+              "max": "60000",
+              "min": "0",
+              "step": "1",
+              "unit": "NA",
+              "unitName": "NA"
+            }
+          }
+        },
+        {
+          "identifier": "nspMotorErrorStatus",
+          "name": "nsp电机故障状态",
+          "accessMode": "r",
+          "dataType": {
+            "type": "array",
+            "mappingType": "array-enum",
+            "specs": {
+              "item": {
+                "mappingType": "array-enum",
+                "specs": {
+                  "0": "无故障",
+                  "1": "电机过温",
+                  "2": "低压故障",
+                  "3": "高压故障",
+                  "5": "霍尔异常",
+                  "6": "过流异常",
+                  "7": "电机失速",
+                  "8": "转速信号异常",
+                  "9": "可控硅短路",
+                  "10": "复位异常",
+                  "12": "缺相"
+                },
+                "type": "enum"
+              },
+              "size": 11
+            }
+          }
+        },
+        {
+          "identifier": "errorCode",
+          "name": "故障信息",
+          "accessMode": "r",
+          "dataType": {
+            "type": "array",
+            "mappingType": "array-enum",
+            "specs": {
+              "item": {
+                "specs": {
+                  "1": "E0 变种设置错误",
+                  "2": "E1 进水超时",
+                  "3": "E2 排水超时",
+                  "4": "E3 门锁故障",
+                  "5": "E4 溢水报警/水位传感器故障",
+                  "6": "E5 洗涤电机故障",
+                  "7": "E6 水加热管故障",
+                  "8": "E7 水加热温度传感器故障",
+                  "9": "E8 变频器型号匹配错",
+                  "10": "E9 变频器通讯故障",
+                  "11": "E10 变频板故障",
+                  "12": "E11 洗涤液自动投放泵故障",
+                  "13": "E12 洗涤液液位传感器故障",
+                  "14": "E13 烘干风机故障",
+                  "15": "E14 烘干加热管故障",
+                  "16": "E15 烘干出风口温度传感器故障",
+                  "17": "E16 烘干进风口温度传感器故障",
+                  "18": "nsp nsp脱水失败",
+                  "19": "E21 消毒液自动投放泵故障",
+                  "20": "E22 消毒液液位传感器故障"
+                },
+                "type": "enum"
+              },
+              "size": "20"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

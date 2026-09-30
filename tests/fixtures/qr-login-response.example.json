@@ -1,0 +1,22 @@
+{
+  "_archive": {
+    "kind": "sanitized_auth_response_shape",
+    "note": "code、token 和 refreshToken 全部是占位值。"
+  },
+  "generate": {
+    "status": 1,
+    "msg": "success",
+    "data": {
+      "code": "<QR_CODE>",
+      "imageUrl": "https://cn.account.tcl.com/auth/common/generateQRCodePic?code=<QR_CODE>"
+    }
+  },
+  "verify": {
+    "status": 1,
+    "msg": "check success",
+    "data": {
+      "token": "<ACCESS_TOKEN>",
+      "refreshToken": "<REFRESH_TOKEN>"
+    }
+  }
+}

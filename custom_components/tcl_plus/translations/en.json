@@ -1,0 +1,605 @@
+{
+  "title": "TCL+",
+  "config": {
+    "step": {
+      "user": {
+        "description": "Connect to the TCL+ cloud to create a sign-in QR code."
+      },
+      "scan": {
+        "title": "Scan with TCL+",
+        "description": "Scan this QR code in the TCL+ mobile app and approve access. Then select Submit. If the image does not display, [open the QR code]({qr_url}).\n\n![TCL+ sign-in QR code]({qr_url})",
+        "data": {
+          "new_code": "Generate a new QR code"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not reach TCL+. Try again.",
+      "qr_pending": "Authorization is not complete. Approve it in TCL+ and submit again.",
+      "qr_expired": "The QR code expired. Select Generate a new QR code.",
+      "no_devices": "This account has no identifiable domestic TCL+ devices.",
+      "wrong_account": "This account does not contain a device from the existing integration."
+    },
+    "abort": {
+      "reauth_successful": "TCL+ authorization was updated."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "power": {
+        "name": "Power"
+      },
+      "child_lock": {
+        "name": "Child lock"
+      },
+      "cleaning_reminder": {
+        "name": "Cleaning reminder"
+      },
+      "water_box_full": {
+        "name": "Water tank full"
+      }
+    },
+    "sensor": {
+      "overview": {
+        "name": "Current status"
+      },
+      "important_alerts": {
+        "name": "Important alerts"
+      },
+      "run_state": {
+        "name": "Run state"
+      },
+      "stage": {
+        "name": "Cycle stage"
+      },
+      "selected_program": {
+        "name": "Selected program"
+      },
+      "remaining_time": {
+        "name": "Remaining time"
+      },
+      "faults": {
+        "name": "Fault codes"
+      },
+      "cleaning_current_count": {
+        "name": "Cleaning reminder count"
+      },
+      "cleaning_threshold": {
+        "name": "Cleaning reminder threshold"
+      },
+      "raw_eco": {
+        "name": "Raw Eco mode"
+      },
+      "raw_ecostatus": {
+        "name": "Raw Ecostatus"
+      },
+      "raw_ai_smart_control_source": {
+        "name": "Raw Smart control source"
+      },
+      "raw_capabilities": {
+        "name": "Raw Capabilities"
+      },
+      "raw_child_lock": {
+        "name": "Raw Child lock"
+      },
+      "raw_cleaning_count": {
+        "name": "Raw Cleaning count"
+      },
+      "raw_cleaning_reminder": {
+        "name": "Raw Cleaning reminder"
+      },
+      "raw_collection_run": {
+        "name": "Raw Collection run"
+      },
+      "raw_consumables_remain": {
+        "name": "Raw Consumables remain"
+      },
+      "raw_detergent_intellect": {
+        "name": "Raw Detergent intellect"
+      },
+      "raw_detergent_intellect_gear": {
+        "name": "Raw Detergent intellect gear"
+      },
+      "raw_dirty_remind_wash_cur_times": {
+        "name": "Raw Dirty remind wash cur times"
+      },
+      "raw_dirty_remind_wash_max_times": {
+        "name": "Raw Dirty remind wash max times"
+      },
+      "raw_error_code": {
+        "name": "Raw Error code"
+      },
+      "raw_fabric_softener_intellect": {
+        "name": "Raw Fabric softener intellect"
+      },
+      "raw_fresh_water_rinse_mode": {
+        "name": "Raw Fresh water rinse mode"
+      },
+      "raw_fresh_water_rinse_status": {
+        "name": "Raw Fresh water rinse status"
+      },
+      "raw_freshness_mode": {
+        "name": "Raw Freshness mode"
+      },
+      "raw_freshness_state": {
+        "name": "Raw Freshness state"
+      },
+      "raw_freshness_time": {
+        "name": "Raw Freshness time"
+      },
+      "raw_intelli_detect_percentage": {
+        "name": "Raw Intelli detect percentage"
+      },
+      "raw_lower_shell_main_running_time": {
+        "name": "Raw Lower shell main running time"
+      },
+      "raw_lower_shell_mode": {
+        "name": "Raw Lower shell mode"
+      },
+      "raw_lower_shell_mode_capabilities": {
+        "name": "Raw Lower shell mode capabilities"
+      },
+      "raw_lower_shell_order_mode": {
+        "name": "Raw Lower shell order mode"
+      },
+      "raw_lower_shell_order_time": {
+        "name": "Raw Lower shell order time"
+      },
+      "raw_lower_shell_program_running_rime": {
+        "name": "Raw Lower shell program running rime"
+      },
+      "raw_lower_shell_rinse_count": {
+        "name": "Raw Lower shell rinse count"
+      },
+      "raw_lower_shell_rotate_speed": {
+        "name": "Raw Lower shell rotate speed"
+      },
+      "raw_lower_shell_run_status": {
+        "name": "Raw Lower shell run status"
+      },
+      "raw_lower_shell_stains_type": {
+        "name": "Raw Lower shell stains type"
+      },
+      "raw_lower_shell_washing_count": {
+        "name": "Raw Lower shell washing count"
+      },
+      "raw_lower_shell_washing_status": {
+        "name": "Raw Lower shell washing status"
+      },
+      "raw_lower_shell_washing_temp": {
+        "name": "Raw Lower shell washing temp"
+      },
+      "raw_lower_shell_washing_temp_set": {
+        "name": "Raw Lower shell washing temp set"
+      },
+      "raw_lower_shell_washing_temp_set_int": {
+        "name": "Raw Lower shell washing temp set int"
+      },
+      "raw_lower_shell_washing_time": {
+        "name": "Raw Lower shell washing time"
+      },
+      "raw_lower_shell_washing_time_set": {
+        "name": "Raw Lower shell washing time set"
+      },
+      "raw_night_wash_mode": {
+        "name": "Raw Night mode"
+      },
+      "raw_night_wash_state": {
+        "name": "Raw Night wash state"
+      },
+      "raw_nsp_cur_attempts": {
+        "name": "Raw Nsp cur attempts"
+      },
+      "raw_nsp_fitting_eccentricity_value": {
+        "name": "Raw Nsp fitting eccentricity value"
+      },
+      "raw_nsp_fitting_weight": {
+        "name": "Raw Nsp fitting weight"
+      },
+      "raw_nsp_motor_error_status": {
+        "name": "Raw Nsp motor error status"
+      },
+      "raw_nsp_motor_power": {
+        "name": "Raw Nsp motor power"
+      },
+      "raw_nsp_original_eccentricity_value": {
+        "name": "Raw Nsp original eccentricity value"
+      },
+      "raw_nsp_original_weight": {
+        "name": "Raw Nsp original weight"
+      },
+      "raw_nsp_rotate_speed": {
+        "name": "Raw Nsp rotate speed"
+      },
+      "raw_nsp_water_level_freq": {
+        "name": "Raw Nsp water level freq"
+      },
+      "raw_power_switch": {
+        "name": "Raw Power switch"
+      },
+      "raw_program_memory": {
+        "name": "Raw Program memory"
+      },
+      "raw_soak": {
+        "name": "Raw Extra soak"
+      },
+      "raw_soak_status": {
+        "name": "Raw Soak status"
+      },
+      "raw_speed_up_mode": {
+        "name": "Raw Speed up mode"
+      },
+      "raw_speed_up_status": {
+        "name": "Raw Speed up status"
+      },
+      "raw_tsl_latest_version": {
+        "name": "Raw Latest thing model version"
+      },
+      "raw_tsl_query_time": {
+        "name": "Raw Thing model query time"
+      },
+      "raw_tsl_req_version": {
+        "name": "Raw Requested thing model version"
+      },
+      "raw_turn_off_spec_notification": {
+        "name": "Raw Turn off spec notification"
+      },
+      "raw_washer_dryer_linkage": {
+        "name": "Raw Washer dryer linkage"
+      },
+      "raw_wifi_drop_packet_rate": {
+        "name": "Raw Wi-Fi packet loss rate"
+      },
+      "raw_wifi_ip": {
+        "name": "Raw Wi-Fi IP address"
+      },
+      "raw_wifi_mac_addr": {
+        "name": "Raw Wi-Fi MAC address"
+      },
+      "raw_wifi_mode": {
+        "name": "Raw Wi-Fi mode"
+      },
+      "raw_wifi_rssi": {
+        "name": "Raw Wi-Fi RSSI"
+      },
+      "raw_wifi_ssid": {
+        "name": "Raw Wi-Fi SSID"
+      },
+      "raw_wifi_signal_strength": {
+        "name": "Raw Wi-Fi signal strength"
+      },
+      "dryer_raw_child_lock": {
+        "name": "Raw Child lock"
+      },
+      "dryer_raw_collection_run": {
+        "name": "Raw Favorite program"
+      },
+      "dryer_raw_crease_resistance": {
+        "name": "Raw Anti-crease"
+      },
+      "dryer_raw_crease_resistance_status": {
+        "name": "Raw Anti-crease status"
+      },
+      "dryer_raw_dry_mode_capabilities": {
+        "name": "Raw Available drying programs"
+      },
+      "dryer_raw_dry_mute_status": {
+        "name": "Raw Mute status"
+      },
+      "dryer_raw_dry_wind_speed": {
+        "name": "Raw Drying air speed"
+      },
+      "dryer_raw_error_code": {
+        "name": "Raw Fault codes"
+      },
+      "dryer_raw_intelli_detect_percentage": {
+        "name": "Raw Detection progress"
+      },
+      "dryer_raw_low_temp_dry": {
+        "name": "Raw Low-temperature drying"
+      },
+      "dryer_raw_low_temp_dry_status": {
+        "name": "Raw Low-temperature status"
+      },
+      "dryer_raw_lower_shell_washing_status": {
+        "name": "Raw Drying stage"
+      },
+      "dryer_raw_lower_shell_washing_time_set": {
+        "name": "Raw Drying time adjustment"
+      },
+      "dryer_raw_power_switch": {
+        "name": "Raw Power"
+      },
+      "dryer_raw_speed_up_mode": {
+        "name": "Raw Speed-up"
+      },
+      "dryer_raw_speed_up_status": {
+        "name": "Raw Speed-up status"
+      },
+      "dryer_raw_tsl_latest_version": {
+        "name": "Raw Thing model latest version"
+      },
+      "dryer_raw_tsl_query_time": {
+        "name": "Raw Thing model query time"
+      },
+      "dryer_raw_tsl_req_version": {
+        "name": "Raw Thing model requested version"
+      },
+      "dryer_raw_uv_sterilize": {
+        "name": "Raw UV sterilization"
+      },
+      "dryer_raw_wash_mute_mode": {
+        "name": "Raw Mute"
+      },
+      "dryer_raw_wash_shell_dry_mode": {
+        "name": "Raw Dryness level"
+      },
+      "dryer_raw_wash_shell_mode": {
+        "name": "Raw Program"
+      },
+      "dryer_raw_wash_shell_order_mode": {
+        "name": "Raw Scheduled start"
+      },
+      "dryer_raw_wash_shell_order_time": {
+        "name": "Raw Scheduled start time"
+      },
+      "dryer_raw_wash_shell_run_status": {
+        "name": "Raw Run status"
+      },
+      "dryer_raw_wash_shell_washing_temp": {
+        "name": "Raw Operating temperature"
+      },
+      "dryer_raw_wash_shell_washing_time": {
+        "name": "Raw Remaining run time"
+      },
+      "dryer_raw_washing_time": {
+        "name": "Raw Drying time"
+      },
+      "dryer_raw_water_box_status": {
+        "name": "Raw Water tank status"
+      },
+      "dryer_raw_wifi_drop_packet_rate": {
+        "name": "Raw Wi-Fi packet loss"
+      },
+      "dryer_raw_wifi_ip": {
+        "name": "Raw Wi-Fi IP address"
+      },
+      "dryer_raw_wifi_mac_addr": {
+        "name": "Raw Wi-Fi MAC address"
+      },
+      "dryer_raw_wifi_mode": {
+        "name": "Raw Wi-Fi mode"
+      },
+      "dryer_raw_wifi_rssi": {
+        "name": "Raw Wi-Fi RSSI"
+      },
+      "dryer_raw_wifi_ssid": {
+        "name": "Raw Wi-Fi SSID"
+      },
+      "dryer_raw_wifi_signal_strength": {
+        "name": "Raw Wi-Fi signal strength"
+      }
+    },
+    "button": {
+      "washer_power_on": {
+        "name": "Turn washer on"
+      },
+      "washer_start": {
+        "name": "Start or resume washing"
+      },
+      "washer_pause": {
+        "name": "Pause washing"
+      },
+      "dryer_power_on": {
+        "name": "Turn dryer on"
+      },
+      "dryer_start": {
+        "name": "Start or resume drying"
+      },
+      "dryer_pause": {
+        "name": "Pause drying"
+      }
+    },
+    "number": {
+      "control_lower_shell_washing_temp_set_int": {
+        "name": "Lower shell washing temp set int"
+      },
+      "control_lower_shell_rinse_count": {
+        "name": "Lower shell rinse count"
+      },
+      "control_cleaning_count": {
+        "name": "Cleaning count"
+      },
+      "control_lower_shell_order_time": {
+        "name": "Lower shell order time"
+      },
+      "control_lower_shell_washing_count": {
+        "name": "Lower shell washing count"
+      },
+      "control_freshness_time": {
+        "name": "Freshness time"
+      },
+      "dryer_control_washing_time": {
+        "name": "Drying time"
+      },
+      "dryer_control_wash_shell_washing_time": {
+        "name": "Remaining run time"
+      },
+      "dryer_control_wash_shell_washing_temp": {
+        "name": "Operating temperature"
+      },
+      "dryer_control_wash_shell_order_time": {
+        "name": "Scheduled start time"
+      }
+    },
+    "select": {
+      "control_lower_shell_washing_temp_set": {
+        "name": "Lower shell washing temp set"
+      },
+      "control_lower_shell_rotate_speed": {
+        "name": "Lower shell rotate speed"
+      },
+      "control_lower_shell_run_status": {
+        "name": "Lower shell run status"
+      },
+      "control_lower_shell_mode": {
+        "name": "Lower shell mode"
+      },
+      "control_lower_shell_stains_type": {
+        "name": "Lower shell stains type"
+      },
+      "control_lower_shell_washing_time_set": {
+        "name": "Lower shell washing time set"
+      },
+      "control_detergent_intellect_gear": {
+        "name": "Detergent intellect gear"
+      },
+      "control_collection_run": {
+        "name": "Collection run"
+      },
+      "dryer_control_wash_shell_mode": {
+        "name": "Program"
+      },
+      "dryer_control_wash_shell_dry_mode": {
+        "name": "Dryness level"
+      },
+      "dryer_control_lower_shell_washing_time_set": {
+        "name": "Drying time adjustment"
+      },
+      "dryer_control_dry_wind_speed": {
+        "name": "Drying air speed"
+      },
+      "dryer_control_wash_shell_run_status": {
+        "name": "Run status"
+      },
+      "dryer_control_lower_shell_washing_status": {
+        "name": "Drying stage"
+      },
+      "dryer_control_collection_run": {
+        "name": "Favorite program"
+      }
+    },
+    "switch": {
+      "control_power_switch": {
+        "name": "Power switch"
+      },
+      "control_freshness_mode": {
+        "name": "Freshness mode"
+      },
+      "control_child_lock": {
+        "name": "Child lock"
+      },
+      "control_lower_shell_order_mode": {
+        "name": "Lower shell order mode"
+      },
+      "control_fresh_water_rinse_mode": {
+        "name": "Fresh water rinse mode"
+      },
+      "control_speed_up_mode": {
+        "name": "Speed up mode"
+      },
+      "control_night_wash_mode": {
+        "name": "Night mode"
+      },
+      "control_program_memory": {
+        "name": "Program memory"
+      },
+      "control_soak_status": {
+        "name": "Soak status"
+      },
+      "control_soak": {
+        "name": "Extra soak"
+      },
+      "control_washer_dryer_linkage": {
+        "name": "Washer dryer linkage"
+      },
+      "control_eco": {
+        "name": "Eco mode"
+      },
+      "control_fabric_softener_intellect": {
+        "name": "Fabric softener intellect"
+      },
+      "control_detergent_intellect": {
+        "name": "Detergent intellect"
+      },
+      "control_turn_off_spec_notification_0": {
+        "name": "Detergent shortage notification"
+      },
+      "control_turn_off_spec_notification_1": {
+        "name": "Fabric softener shortage notification"
+      },
+      "dryer_control_power_switch": {
+        "name": "Power"
+      },
+      "dryer_control_child_lock": {
+        "name": "Child lock"
+      },
+      "dryer_control_crease_resistance": {
+        "name": "Anti-crease"
+      },
+      "dryer_control_wash_mute_mode": {
+        "name": "Mute"
+      },
+      "dryer_control_speed_up_mode": {
+        "name": "Speed-up"
+      },
+      "dryer_control_low_temp_dry": {
+        "name": "Low-temperature drying"
+      },
+      "dryer_control_wash_shell_order_mode": {
+        "name": "Scheduled start"
+      },
+      "dryer_control_uv_sterilize": {
+        "name": "UV sterilization"
+      },
+      "dryer_control_error_code_1": {
+        "name": "Fault code 1: dC"
+      },
+      "dryer_control_error_code_2": {
+        "name": "Fault code 2: E11"
+      },
+      "dryer_control_error_code_3": {
+        "name": "Fault code 3: E12"
+      },
+      "dryer_control_error_code_4": {
+        "name": "Fault code 4: E41"
+      },
+      "dryer_control_error_code_5": {
+        "name": "Fault code 5: E42"
+      },
+      "dryer_control_error_code_6": {
+        "name": "Fault code 6: E51"
+      },
+      "dryer_control_error_code_7": {
+        "name": "Fault code 7: E52"
+      },
+      "dryer_control_error_code_8": {
+        "name": "Fault code 8: E61"
+      },
+      "dryer_control_error_code_9": {
+        "name": "Fault code 9: E62"
+      },
+      "dryer_control_error_code_10": {
+        "name": "Fault code 10: E71"
+      },
+      "dryer_control_error_code_11": {
+        "name": "Fault code 11: E72"
+      },
+      "dryer_control_error_code_12": {
+        "name": "Fault code 12: E73"
+      },
+      "dryer_control_error_code_13": {
+        "name": "Fault code 13: E21"
+      },
+      "dryer_control_error_code_14": {
+        "name": "Fault code 14: E43"
+      },
+      "dryer_control_error_code_15": {
+        "name": "Fault code 15: E44"
+      },
+      "dryer_control_error_code_16": {
+        "name": "Fault code 16: Ful"
+      }
+    }
+  }
+}

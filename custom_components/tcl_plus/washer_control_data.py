@@ -1,0 +1,120 @@
+"""Archived G100T7R-DIS writable property constraints."""
+
+from __future__ import annotations
+
+from typing import Any
+
+WASHER_CONTROL_SPECS: dict[str, dict[str, Any]] = {
+    "ECO": {"kind": "bool", "options": ((0, "关闭"), (1, "开启"))},
+    "childLock": {"kind": "bool", "options": ((0, "关闭"), (1, "打开"))},
+    "cleaningCount": {"kind": "int", "minimum": 0, "maximum": 1440, "step": 1},
+    "collectionRun": {
+        "kind": "enum",
+        "options": (
+            (0, "未运行收藏"),
+            (1, "收藏1"),
+            (2, "收藏2"),
+            (3, "收藏3"),
+            (4, "收藏4"),
+            (5, "收藏5"),
+        ),
+    },
+    "detergentIntellect": {"kind": "bool", "options": ((0, "关闭"), (1, "开启"))},
+    "detergentIntellectGear": {
+        "kind": "enum",
+        "options": (
+            (0, "关闭"),
+            (1, "智能"),
+            (2, "L1（少量）"),
+            (3, "L2（中等）"),
+            (4, "L3（多量）"),
+        ),
+    },
+    "fabricSoftenerIntellect": {"kind": "bool", "options": ((0, "关闭"), (1, "开启"))},
+    "freshWaterRinseMode": {"kind": "bool", "options": ((0, "关闭"), (1, "开启"))},
+    "freshnessMode": {"kind": "bool", "options": ((0, "关闭"), (1, "开启"))},
+    "freshnessTime": {"kind": "int", "minimum": 1, "maximum": 20, "step": 1},
+    "lowerShellMode": {
+        "kind": "enum",
+        "options": (
+            (0, "混合"),
+            (1, "快洗"),
+            (2, "羊毛"),
+            (3, "大件"),
+            (4, "真丝"),
+            (5, "超净"),
+            (6, "热力除菌"),
+            (9, "单脱水"),
+            (10, "漂+脱"),
+            (11, "筒清洁"),
+            (14, "羽绒"),
+            (15, "棉麻"),
+            (16, "运动服"),
+            (17, "衬衫"),
+            (18, "内衣"),
+            (21, "巴氏除菌"),
+            (23, "除菌螨"),
+            (26, "童装"),
+            (29, "护色"),
+            (33, "冲锋衣"),
+            (35, "AI智慧洗"),
+        ),
+    },
+    "lowerShellOrderMode": {"kind": "bool", "options": ((0, "关闭"), (1, "开启"))},
+    "lowerShellOrderTime": {"kind": "int", "minimum": 0, "maximum": 1440, "step": 1},
+    "lowerShellRinseCount": {"kind": "int", "minimum": 0, "maximum": 6, "step": 1},
+    "lowerShellRotateSpeed": {
+        "kind": "enum",
+        "options": ((0, "免脱"), (1, "400"), (3, "800"), (4, "1000"), (6, "1400")),
+    },
+    "lowerShellRunStatus": {
+        "kind": "enum",
+        "options": ((0, "待机"), (1, "暂停"), (2, "运行")),
+    },
+    "lowerShellStainsType": {
+        "kind": "enum",
+        "options": (
+            (0, "关闭"),
+            (2, "油渍"),
+            (3, "红酒渍"),
+            (4, "水果渍"),
+            (6, "混渍"),
+            (7, "奶渍"),
+            (8, "血渍"),
+            (9, "妆渍"),
+        ),
+    },
+    "lowerShellWashingCount": {"kind": "int", "minimum": 0, "maximum": 1440, "step": 1},
+    "lowerShellWashingTempSet": {
+        "kind": "enum",
+        "options": ((0, "常温"), (2, "30℃"), (4, "40℃"), (6, "60℃"), (8, "90℃")),
+    },
+    "lowerShellWashingTempSetInt": {
+        "kind": "int",
+        "minimum": 0,
+        "maximum": 100,
+        "step": 1,
+    },
+    "lowerShellWashingTimeSet": {
+        "kind": "enum",
+        "options": (
+            (0, "取消主洗"),
+            (1, "默认时间"),
+            (2, "+5分钟"),
+            (3, "+10分钟"),
+            (5, "+20分钟"),
+        ),
+    },
+    "nightWashMode": {"kind": "bool", "options": ((0, "关闭"), (1, "开启"))},
+    "powerSwitch": {"kind": "bool", "options": ((0, "关闭"), (1, "开启"))},
+    "programMemory": {"kind": "bool", "options": ((0, "关闭"), (1, "开启"))},
+    "soak": {"kind": "bool", "options": ((0, "关闭"), (1, "开启"))},
+    "soakStatus": {"kind": "bool", "options": ((0, "浸泡运行结束"), (1, "浸泡运行中"))},
+    "speedUpMode": {"kind": "bool", "options": ((0, "关闭"), (1, "开启"))},
+    "turnOffSpecNotification": {
+        "kind": "array",
+        "options": ((0, "洗衣液缺少通知"), (1, "柔顺剂缺少通知")),
+        "size": 2,
+    },
+    "washerDryerLinkage": {"kind": "bool", "options": ((0, "关闭"), (1, "开启"))},
+}
