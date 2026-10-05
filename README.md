@@ -2,7 +2,7 @@
 
 <img src="custom_components/tcl_plus/brand/icon.png" alt="TCL+" width="96">
 
-将国内 **TCL+** 账号中的智能家电接入 Home Assistant。使用 TCL+ 手机应用扫码授权后，集成会自动发现设备，并根据各产品的云端功能定义生成状态和控制实体。
+将 **TCL+** 账号中的智能家电接入 Home Assistant。使用 TCL+ 手机应用扫码授权后，集成会自动发现设备，并根据各产品的云端功能定义生成状态和控制实体。
 
 **当前版本：1.0.0** · [下载与版本记录](https://github.com/WangYuhang-CN/TCL-HA/releases) · [问题反馈](https://github.com/WangYuhang-CN/TCL-HA/issues)
 
@@ -85,8 +85,6 @@ Home Assistant 运行时只需要 `tcl_plus` 文件夹。
 ## 升级
 
 备份已安装的 `custom_components/tcl_plus`，用新版本覆盖整个文件夹，然后重启 Home Assistant。保留现有集成配置项；授权有效时无需重新扫码。
-
-已有两台洗烘机的设备和实体唯一标识保持兼容，现有仪表盘和自动化可继续引用。实际实体数量会随设备上报字段和云端模型变化。
 
 ## 常见情况
 
