@@ -5,7 +5,11 @@ from __future__ import annotations
 from typing import Any
 
 from homeassistant import config_entries
-from homeassistant.config_entries import SOURCE_REAUTH, ConfigFlowResult
+from homeassistant.config_entries import (
+    SOURCE_REAUTH,
+    SOURCE_RECONFIGURE,
+    ConfigFlowResult,
+)
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 import voluptuous as vol
 
@@ -62,10 +66,15 @@ class TclPlusConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             except TclError:
                 errors["base"] = "cannot_connect"
             else:
+                entry = None
+                if self.source == SOURCE_REAUTH:
+                    entry = self._get_reauth_entry()
+                elif self.source == SOURCE_RECONFIGURE:
+                    entry = self._get_reconfigure_entry()
                 if not devices:
                     errors["base"] = "no_devices"
-                elif self.source == SOURCE_REAUTH and not set(
-                    self._get_reauth_entry().data.get(CONF_DEVICE_IDS, [])
+                elif entry is not None and not set(
+                    entry.data.get(CONF_DEVICE_IDS, [])
                 ).intersection(device.device_id for device in devices):
                     errors["base"] = "wrong_account"
                 else:
@@ -74,9 +83,9 @@ class TclPlusConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                         CONF_REFRESH_TOKEN: refresh_token,
                         CONF_DEVICE_IDS: [device.device_id for device in devices],
                     }
-                    if self.source == SOURCE_REAUTH:
+                    if entry is not None:
                         return self.async_update_reload_and_abort(
-                            self._get_reauth_entry(), data_updates=data
+                            entry, data_updates=data
                         )
                     return self.async_create_entry(title="TCL+", data=data)
 
@@ -89,4 +98,10 @@ class TclPlusConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
 
     async def async_step_reauth(self, entry_data: dict[str, Any]) -> ConfigFlowResult:
         """Start a fresh QR authorization after a credential failure."""
+        return await self.async_step_user()
+
+    async def async_step_reconfigure(
+        self, user_input: dict[str, Any] | None = None
+    ) -> ConfigFlowResult:
+        """Let the user renew authorization from the existing entry's menu."""
         return await self.async_step_user()

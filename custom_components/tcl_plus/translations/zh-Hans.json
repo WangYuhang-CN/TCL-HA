@@ -7,7 +7,7 @@
       },
       "scan": {
         "title": "使用 TCL+ 扫码",
-        "description": "请用手机 TCL+ 扫描二维码并确认授权，然后点击提交。如图片未显示，可[打开二维码链接]({qr_url})。\n\n![TCL+ 登录二维码]({qr_url})",
+        "description": "请用手机 TCL+ 扫描二维码并确认授权，然后点击提交。重新登录时请使用包含原设备的账号，现有设备和实体会保留。如图片未显示，可[打开二维码链接]({qr_url})。\n\n![TCL+ 登录二维码]({qr_url})",
         "data": {
           "new_code": "重新生成二维码"
         }
@@ -21,7 +21,8 @@
       "wrong_account": "该账号不包含原集成中的设备。"
     },
     "abort": {
-      "reauth_successful": "TCL+ 授权已更新。"
+      "reauth_successful": "TCL+ 授权已更新。",
+      "reconfigure_successful": "TCL+ 已重新登录，现有设备和实体已保留。"
     }
   },
   "entity": {

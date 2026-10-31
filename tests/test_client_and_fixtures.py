@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import asyncio
+import base64
 import importlib
 import json
 from pathlib import Path
@@ -195,6 +196,7 @@ def test_401_refreshes_once_and_persists_both_tokens() -> None:
         )
         assert await client.async_list_devices() == []
         assert saved == [("new", "new-refresh")]
+        assert session.calls[1][0] == "GET"
         assert session.calls[1][1].endswith("/auth/auth/refershToken")
         assert session.calls[2][2]["headers"]["accessToken"] == "new"
 
@@ -208,5 +210,31 @@ def test_failed_control_is_not_retried_without_auth_error() -> None:
         with pytest.raises(api.TclError):
             await client.async_set_property("washer", "powerSwitch", 1)
         assert len(session.calls) == 1
+
+    asyncio.run(run())
+
+
+def test_expired_saved_token_refreshes_before_loading_devices() -> None:
+    async def run() -> None:
+        expired = "header." + base64.urlsafe_b64encode(b'{"exp":1}').decode() + ".sig"
+        saved = []
+        session = FakeSession(
+            [
+                FakeResponse(
+                    {"code": 1, "accessToken": "renewed", "refreshToken": "rotated"}
+                ),
+                FakeResponse({"code": 200, "data": []}),
+            ]
+        )
+        client = api.TclApi(
+            session, expired, "stored-refresh", lambda *tokens: saved.append(tokens)
+        )
+        assert await client.async_list_devices() == []
+        method, url, options = session.calls[0]
+        assert method == "GET"
+        assert url.endswith("/auth/auth/refershToken")
+        assert options["headers"] == {"refreshToken": "stored-refresh"}
+        assert saved == [("renewed", "rotated")]
+        assert session.calls[1][2]["headers"]["accessToken"] == "renewed"
 
     asyncio.run(run())

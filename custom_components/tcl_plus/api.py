@@ -206,7 +206,7 @@ class TclApi:
                 raise TclAuthError("No TCL+ refresh token")
             try:
                 payload = await self._request(
-                    "POST",
+                    "GET",
                     AUTH_BASE_URL + "/auth/auth/refershToken",
                     params={
                         "appId": APP_ID,

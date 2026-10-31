@@ -4,11 +4,12 @@
 
 将 **TCL+** 账号中的智能家电接入 Home Assistant。使用 TCL+ 手机应用扫码授权后，集成会自动发现设备，并根据各产品的云端功能定义生成状态和控制实体。
 
-**当前版本：1.0.0** · [下载与版本记录](https://github.com/WangYuhang-CN/TCL-HA/releases) · [问题反馈](https://github.com/WangYuhang-CN/TCL-HA/issues)
+**开发版本：1.0.1（尚未发布）** · [正式版下载与版本记录](https://github.com/WangYuhang-CN/TCL-HA/releases) · [问题反馈](https://github.com/WangYuhang-CN/TCL-HA/issues)
 
 ## 功能
 
 - **扫码授权**：通过 TCL+ App 确认登录，凭证保存在 Home Assistant 配置项中。
+- **重新登录**：在 TCL+ 集成账号的菜单中选择“重新配置”，即可重新扫码并更新原配置，无需删除设备。自动续期使用 TCL 服务端支持的 GET 请求。
 - **自动适配**：按设备所属产品的物模型识别功能，生成传感器、开关、程序选择和数值控制。
 - **能力识别**：洗烘程序选项结合设备上报的能力列表过滤，控制参数遵守该产品的取值范围和步长。
 - **状态同步**：每台设备每 30 秒读取一次状态；操作后通过云端回读确认结果。
@@ -86,6 +87,8 @@ Home Assistant 运行时只需要 `tcl_plus` 文件夹。
 
 备份已安装的 `custom_components/tcl_plus`，用新版本覆盖整个文件夹，然后重启 Home Assistant。保留现有集成配置项；授权有效时无需重新扫码。
 
+1.0.1 修正自动续期请求方法，并增加“重新配置”扫码入口。已在 Home Assistant 2026.9.4 验证过期令牌自动续期、凭证保存、原配置保留及设备状态读取恢复；手动重新扫码更新原配置、续期后再次重启的实机回归已由用户确认完成。
+
 ## 常见情况
 
 | 情况 | 处理方式 |
@@ -115,7 +118,7 @@ python -m pytest -q
 ruff check custom_components tests scripts
 ```
 
-`tests/fixtures` 只保留测试所需的脱敏样本，测试无需真实账号或联网。实体工厂测试使用最小 Home Assistant 接口替身；1.0.0 的真实 Core 加载与设备行为仍需安装验证。
+`tests/fixtures` 只保留测试所需的脱敏样本，测试无需真实账号或联网。实体工厂测试使用最小 Home Assistant 接口替身。`tests/test_config_flow.py` 使用已安装的 Home Assistant 的真实流程辅助方法验证原配置更新、重新加载和账号校验；未安装 Home Assistant 时跳过该文件。离线测试不能替代真实 Core 加载与设备行为验证。
 
 分支提交和 Pull Request 会自动运行 GitHub Actions 检查，也可从 Actions 页面手动运行 CI。
 

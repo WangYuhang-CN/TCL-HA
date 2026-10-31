@@ -21,7 +21,8 @@
       "wrong_account": "This account does not contain a device from the existing integration."
     },
     "abort": {
-      "reauth_successful": "TCL+ authorization was updated."
+      "reauth_successful": "TCL+ authorization was updated.",
+      "reconfigure_successful": "TCL+ authorization updated. Existing devices and entities have been kept."
     }
   },
   "entity": {

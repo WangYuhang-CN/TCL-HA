@@ -1,7 +1,7 @@
 {
   "domain": "tcl_plus",
   "name": "TCL+",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "documentation": "https://github.com/WangYuhang-CN/TCL-HA",
   "issue_tracker": "https://github.com/WangYuhang-CN/TCL-HA/issues",
   "config_flow": true,
