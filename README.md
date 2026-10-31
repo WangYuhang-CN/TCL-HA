@@ -4,7 +4,7 @@
 
 将 **TCL+** 账号中的智能家电接入 Home Assistant。使用 TCL+ 手机应用扫码授权后，集成会自动发现设备，并根据各产品的云端功能定义生成状态和控制实体。
 
-**开发版本：1.0.1（尚未发布）** · [正式版下载与版本记录](https://github.com/WangYuhang-CN/TCL-HA/releases) · [问题反馈](https://github.com/WangYuhang-CN/TCL-HA/issues)
+[正式版下载与版本记录](https://github.com/WangYuhang-CN/TCL-HA/releases) · [问题反馈](https://github.com/WangYuhang-CN/TCL-HA/issues)
 
 ## 功能
 
@@ -86,8 +86,6 @@ Home Assistant 运行时只需要 `tcl_plus` 文件夹。
 ## 升级
 
 备份已安装的 `custom_components/tcl_plus`，用新版本覆盖整个文件夹，然后重启 Home Assistant。保留现有集成配置项；授权有效时无需重新扫码。
-
-1.0.1 修正自动续期请求方法，并增加“重新配置”扫码入口。已在 Home Assistant 2026.9.4 验证过期令牌自动续期、凭证保存、原配置保留及设备状态读取恢复；手动重新扫码更新原配置、续期后再次重启的实机回归已由用户确认完成。
 
 ## 常见情况
 
